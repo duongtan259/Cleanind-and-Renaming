@@ -1,0 +1,147 @@
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttccom001100` AS 
+SELECT
+T_EMNO AS employee_EMNO,
+T_NAMA AS name_NAMA,
+T_NAMB AS given_name_NAMB,
+T_NAMC AS middle_name_NAMC,
+T_NAMD AS last_name_NAMD,
+T_SEAK AS search_key_SEAK,
+T_CWOC AS department_CWOC,
+T_CLRT AS labor_rate_CLRT,
+T_CPCP AS cost_component_CPCP,
+T_CLAN AS language_CLAN,
+T_CCAL AS calendar_code_CCAL,
+T_LOCO AS logon_code_LOCO,
+T_IMAG AS picture_IMAG,
+T_GUID AS guid_GUID,
+T_CTIT AS title_CTIT
+FROM `s-bicloud-curated-0001-p.ln_100.ttccom001100`;
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttcmcs002100` AS 
+SELECT
+T_CCUR AS currency_CCUR,
+T_DSCA AS description_DSCA,
+T_DSCB AS short_description_DSCB,
+T_CRND AS rounding_factor_CRND,
+T_EMUC AS emu_currency_EMUC,
+T_BREP AS blwi_reporting_currency_BREP,
+T_GTRF AS grand_total_rounding_factor_GTRF,
+T_ICCC AS iso_currency_code_ICCC
+FROM `s-bicloud-curated-0001-p.ln_100.ttcmcs002100`;
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttcmcs010100` AS 
+SELECT
+T_CCTY AS country_CCTY,
+T_DSCA AS description_DSCA,
+T_ICTC AS iso_code_alpha3_ICTC,
+T_TFCD AS telephone_TFCD,
+T_TXCD AS telex_TXCD,
+T_FXCD AS fax_FXCD,
+T_SSGN AS starting_sign_for_city_or_area_code_SSGN,
+T_ESGN AS ending_sign_for_city_or_area_code_ESGN,
+T_XSGN AS sign_for_extension_XSGN,
+T_MEEC AS eu_member_state_MEEC,
+T_GEOC AS obsolete_GEOC,
+T_PLTX AS print_line_tax_PLTX,
+T_PTTA AS print_tax_by_tax_authority_PTTA,
+T_TXMP AS print_tax_exemption_TXMP,
+T_COAF AS address_format_COAF,
+T_AFAL AS address_format_for_address_lines_AFAL,
+T_ZMSK AS zip_or_postal_code_mask_ZMSK,
+T_PPCD AS zip_code_base_PPCD,
+T_CGP1 AS blwi_country_group_CGP1,
+T_CGP2 AS tax_country_group_CGP2,
+T_VNCH AS vat_number_check_VNCH,
+T_BNCH AS check_on_bank_account_no_BNCH,
+T_AWTN AS allow_wrong_tax_number_AWTN,
+T_TZID AS time_zone_TZID,
+T_CLAN AS language_CLAN,
+T_ICT2 AS iso_code_alpha2_ICT2,
+T_CCUR AS currency_CCUR
+FROM `s-bicloud-curated-0001-p.ln_100.ttcmcs010100`;
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttcmcs023100` AS 
+SELECT
+T_CITG AS item_group_CITG,
+T_DSCA AS description_DSCA,
+T_CCUR AS currency_CCUR,
+T_SPEC AS costs_to_be_specified_SPEC,
+T_SPCO AS specify_cost_optionally_SPCO
+FROM `s-bicloud-curated-0001-p.ln_100.ttcmcs023100`;
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttiedm010100` AS 
+SELECT
+T_EITM AS engineering_item_EITM,
+T_DSCA AS description_DSCA,
+T_SEAK AS search_key_i_SEAK,
+T_SEAB AS search_key_ii_SEAB,
+T_CPRJ AS project_CPRJ,
+T_DREF AS eitem_reference_DREF,
+T_OPOL AS customizable_OPOL,
+T_CTYP AS product_type_CTYP,
+T_CSEL AS selection_code_CSEL,
+T_CITG AS item_group_CITG,
+T_KITM AS item_type_KITM,
+T_SRCE AS obsolete_SRCE,
+T_ABOM AS assembly_bom_ABOM,
+T_REVS AS series_for_revision_REVS,
+T_UNEF AS unit_effective_UNEF,
+T_ICHG AS interchangeable_ICHG,
+T_CHMA AS change_management_allowed_CHMA,
+T_EDCO AS effective_dates_by_change_order_EDCO,
+T_MCOA AS multiple_change_orders_allowed_MCOA,
+T_CFPA AS new_revision_by_copy_from_pitem_allowed_CFPA,
+T_EXIN AS extra_information_EXIN,
+T_OKTM AS obsolete_OKTM,
+T_TXTA AS eitem_text_TXTA
+FROM `s-bicloud-curated-0001-p.ln_100.ttiedm010100`;
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttiedm100100` AS 
+SELECT
+T_EITM AS engineering_item_EITM,
+T_REVI AS engineering_item_revision_REVI,
+T_DSCA AS description_DSCA,
+T_MBCN AS mbc_number_MBCN,
+T_CRDT AS creation_date_CRDT,
+T_INDT AS effective_date_INDT,
+T_EXDT AS expiry_date_EXDT,
+T_ENGI AS engineer_ENGI,
+T_RELE AS status_RELE,
+T_DSCB AS material_DSCB,
+T_DSCC AS size_DSCC,
+T_DSCD AS standard_DSCD,
+T_CWUN AS weight_unit_CWUN,
+T_WGHT AS weight_WGHT,
+T_UNOM AS bom_quantity_UNOM,
+T_USET AS unit_set_USET,
+T_CUNI AS unit_CUNI,
+T_AFED AS approved_by_engineering_date_AFED,
+T_AFPD AS approved_by_production_date_AFPD,
+T_EFCO AS effective_change_order_EFCO,
+T_EXCO AS expiry_change_order_EXCO,
+T_LDCD AS date_from_cad_LDCD,
+T_CSIG AS item_signal_CSIG,
+T_BMSC AS source_BMSC,
+T_CMBA AS combined_of_eitem_revision_CMBA,
+T_CMBB AS combined_of_unitset_unit_CMBB,
+T_TXTA AS eitem_revision_text_TXTA
+FROM `s-bicloud-curated-0001-p.ln_100.ttiedm100100`;
+CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttiedm110100` AS 
+SELECT
+T_EITM AS engineering_item_EITM,
+T_REVI AS revision_REVI,
+T_PONO AS position_number_PONO,
+T_CMTP AS component_type_CMTP,
+T_COMP AS component_COMP,
+T_LENG AS length_LENG,
+T_WIDT AS width_WIDT,
+T_SIZU AS size_unit_SIZU,
+T_NOUN AS number_of_units_NOUN,
+T_QDEP AS quantity_independent_QDEP,
+T_NQAN AS net_quantity_NQAN,
+T_EXIN AS extra_information_EXIN,
+T_UNEF AS exceptions_present_UNEF,
+T_STCF AS standard_configuration_STCF,
+T_ALMI AS allow_multiple_items_ALMI,
+T_ALTP AS alternatives_present_ALTP,
+T_USUP AS use_up_materials_present_USUP,
+T_RDSP AS reference_designators_present_RDSP,
+T_CMBA AS combined_eitem_revision_positions_CMBA,
+T_CMBB AS combined_of_eitem_revision_CMBB,
+T_TXTA AS ebom_text_TXTA
+FROM `s-bicloud-curated-0001-p.ln_100.ttiedm110100`;
