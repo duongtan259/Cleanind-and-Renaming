@@ -3,7 +3,7 @@ SELECT
 T_SLCP AS source_logistic_company_SLCP,
 T_ORTP AS order_type_ORTP,
 T_KOOR AS kind_of_order_KOOR,
-T_SLSO AS sales_or_warehouse_order_SLSO,
+T_SLSO AS sales_warehouse_order_SLSO,
 T_OSET AS set_OSET,
 T_SCMP AS sales_invoice_company_SCMP,
 T_SFCP AS financial_company_SFCP,
@@ -34,7 +34,7 @@ T_ODAT AS order_date_ODAT,
 T_CDEC AS obsolete_CDEC,
 T_PTPA AS obsolete_PTPA,
 T_SETL AS settlement_order_SETL,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_CIDM AS invoice_delivery_method_CIDM,
 T_CBRN AS line_of_business_CBRN,
 T_CREG AS area_CREG,
@@ -49,7 +49,7 @@ SELECT
 T_SLCP AS source_logistic_company_SLCP,
 T_ORTP AS order_type_ORTP,
 T_KOOR AS kind_of_order_KOOR,
-T_SLSO AS sales_or_warehouse_order_SLSO,
+T_SLSO AS sales_warehouse_order_SLSO,
 T_OSET AS set_OSET,
 T_PONO AS line_PONO,
 T_SQNB AS sequence_SQNB,
@@ -142,7 +142,7 @@ T_PAYM AS payment_method_PAYM,
 T_CPAY AS payment_terms_CPAY,
 T_CCRS AS late_payment_surcharge_CCRS,
 T_KITH AS kit_handling_KITH,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_DLPT AS delivery_point_DLPT,
 T_PKSP AS packing_slip_PKSP
 FROM `s-bicloud-curated-0001-p.ln_200.tcisli245200`;
@@ -151,7 +151,7 @@ SELECT
 T_SLCP AS source_logistic_company_SLCP,
 T_ORTP AS order_type_ORTP,
 T_KOOR AS kind_of_order_KOOR,
-T_SLSO AS sales_or_warehouse_order_SLSO,
+T_SLSO AS sales_warehouse_order_SLSO,
 T_OSET AS set_OSET,
 T_PONO AS line_PONO,
 T_SQNB AS sequence_SQNB,
@@ -405,7 +405,7 @@ T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
 T_LSSN AS lot_and_serial_set_LSSN,
 T_CRTE AS route_CRTE,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrier_lsp_CFRW,
 T_IDAT AS invoice_date_IDAT,
 T_RSCN AS relation_scenario_RSCN,
 T_RFCP AS related_financial_company_RFCP,
@@ -520,7 +520,7 @@ T_CREP AS sales_representative_CREP,
 T_CBRN AS line_of_business_CBRN,
 T_CREG AS area_CREG,
 T_DELN AS delivery_note_DELN,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrier_lsp_CFRW,
 T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
 T_CPRJ AS project_CPRJ,
@@ -593,7 +593,7 @@ T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
 T_LSSN AS lot_and_serial_set_LSSN,
 T_CRTE AS route_CRTE,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrier_lsp_CFRW,
 T_RSCN AS relation_scenario_RSCN,
 T_RFCP AS related_financial_company_RFCP,
 T_RTRA AS related_transaction_type_RTRA,
@@ -634,7 +634,7 @@ T_QUAN AS quantity_QUAN,
 T_TRDT AS exception_message_date_TRDT,
 T_ACCE AS accepted_ACCE,
 T_EFFN AS obsolete_EFFN,
-T_GSIM AS generated_during_order_or_master_planning_GSIM,
+T_GSIM AS generated_during_order_master_planning_GSIM,
 T_AUTP AS auto_process_AUTP,
 T_PRDT AS required_date_PRDT,
 T_RESD AS reschedule_date_RESD,
@@ -652,7 +652,7 @@ T_OPNO AS operation_OPNO,
 T_WSTT AS work_station_WSTT,
 T_RECO AS qm_only_recommends_RECO,
 T_BLMT AS blocking_method_for_inspections_BLMT,
-T_CMBA AS origin,_order,_line,_operation,_work_station_CMBA
+T_CMBA AS origin_order_line_operation_work_station_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc049200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc050200` AS 
 SELECT
@@ -677,10 +677,10 @@ T_TUNI AS test_unit_TUNI,
 T_SARU AS sampling_rule_SARU,
 T_PPER AS obsolete_PPER,
 T_TXTA AS text_TXTA,
-T_CMBA AS origin,_order,_line,_operation,_work_station,_sequence_CMBA,
-T_CMBB AS standard_test_procedure,_version,_test_group_CMBB,
-T_CMCC AS origin,_order,_line,_operation,_work_station_CMCC,
-T_CMBD AS standard_test_procedure,_version_CMBD
+T_CMBA AS origin_order_line_operation_work_station_sequence_CMBA,
+T_CMBB AS standard_test_procedure_version_test_group_CMBB,
+T_CMCC AS origin_order_line_operation_work_station_CMCC,
+T_CMBD AS standard_test_procedure_version_CMBD
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc050200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc051200` AS 
 SELECT
@@ -726,11 +726,11 @@ T_NOMI AS nominal_value_NOMI,
 T_DFCL AS defect_classification_DFCL,
 T_REFR AS reference_designator_REFR,
 T_TXTA AS text_TXTA,
-T_CMBA AS origin,_order,_line,_operation,_work_station,_sequence_CMBA,
-T_CMBB AS origin,_order,_line,_operation,_work_station,_sequence,_line_CMBB,
-T_CMBD AS aspect,_characteristic_CMBD,
-T_CMBE AS instrument,_instrument_number_CMBE,
-T_CMBF AS chart_name,_chart_type_CMBF
+T_CMBA AS origin_order_line_operation_work_station_sequence_CMBA,
+T_CMBB AS origin_order_line_operation_work_station_sequence_line_CMBB,
+T_CMBD AS aspect_characteristic_CMBD,
+T_CMBE AS instrument_instrument_number_CMBE,
+T_CMBF AS chart_name_chart_type_CMBF
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc051200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc100200` AS 
 SELECT
@@ -797,9 +797,9 @@ T_CNCD AS conformance_code_CNCD,
 T_TEAM AS team_TEAM,
 T_CWOC AS work_center_CWOC,
 T_TXTA AS inspection_order_text_TXTA,
-T_CMBA AS standard_test_procedure,_version,_test_group_CMBA,
-T_CMBB AS inspection_order,_line_CMBB,
-T_CMBC AS standard_test_procedure,_version_CMBC
+T_CMBA AS standard_test_procedure_version_test_group_CMBA,
+T_CMBB AS inspection_order_line_CMBB,
+T_CMBC AS standard_test_procedure_version_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc100200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc101200` AS 
 SELECT
@@ -850,10 +850,10 @@ T_PSDT AS planned_start_date_PSDT,
 T_PCDT AS planned_completion_date_PCDT,
 T_ISKL AS instrument_skill_ISKL,
 T_TXTA AS inspection_order_line_text_TXTA,
-T_CMBA AS inspection_order,_line_CMBA,
-T_CMBC AS aspect,_characteristic_CMBC,
-T_CMBD AS instrument,_instrument_number_CMBD,
-T_CMBE AS chart_name,_chart_type_CMBE
+T_CMBA AS inspection_order_line_CMBA,
+T_CMBC AS aspect_characteristic_CMBC,
+T_CMBD AS instrument_instrument_number_CMBD,
+T_CMBE AS chart_name_chart_type_CMBE
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc101200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc110200` AS 
 SELECT
@@ -869,7 +869,7 @@ T_SMDT AS sample_time_SMDT,
 T_SQUA AS sample_quantity_SQUA,
 T_TQUA AS test_quantity_TQUA,
 T_SAIT AS sampling_iteration_SAIT,
-T_CMBA AS inspection_order,_sample_CMBA
+T_CMBA AS inspection_order_sample_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc110200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc115200` AS 
 SELECT
@@ -894,10 +894,10 @@ T_AEMN AS actual_employee_AEMN,
 T_ETIM AS estimated_time_ETIM,
 T_AEMP AS actual_employee_AEMP,
 T_TEXT AS text_TEXT,
-T_CMBA AS inspection_order,_sample_CMBA,
-T_CMBB AS inspection_order,_line_CMBB,
-T_CMBC AS option_set,_option_CMBC,
-T_CMBD AS instrument,_instrument_number_CMBD
+T_CMBA AS inspection_order_sample_CMBA,
+T_CMBB AS inspection_order_line_CMBB,
+T_CMBC AS option_set_option_CMBC,
+T_CMBD AS instrument_instrument_number_CMBD
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc115200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tqmptc120200` AS 
 SELECT
@@ -943,7 +943,7 @@ T_CNDT AS cancelled_date_CNDT,
 T_PRMD AS production_model_PRMD,
 T_PMRV AS production_model_revision_PMRV,
 T_SITE AS site_SITE,
-T_CMBA AS origin_order,_inspection,_handling_unit_CMBA
+T_CMBA AS origin_order_inspection_handling_unit_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tqmptc120200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttccom001200` AS 
 SELECT
@@ -987,12 +987,12 @@ T_BPTX AS business_partner_for_texts_BPTX,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCNT AS primary_contact_CCNT,
@@ -1011,7 +1011,7 @@ T_BPRL AS business_partner_role_BPRL,
 T_BTBV AS to_be_verified_BTBV,
 T_USID AS created_by_USID,
 T_CLCD AS credit_limit_check_per_department_CLCD,
-T_CBCL AS currency_for_bp_balances_or_credit_limits_CBCL,
+T_CBCL AS currency_for_bp_balancescredit_limits_CBCL,
 T_BEID AS business_entity_identifier_BEID,
 T_INET AS website_INET,
 T_IMAG AS picture_IMAG,
@@ -1043,12 +1043,12 @@ T_BPUS AS business_partner_for_statistics_update_BPUS,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCAL AS calendar_code_CCAL,
@@ -1061,7 +1061,7 @@ T_PLDD AS price_list_for_direct_delivery_PLDD,
 T_ODIS AS order_discount_ODIS,
 T_UMSP AS upper_margin_UMSP,
 T_LMSP AS lower_margin_LMSP,
-T_BPPR AS business_partner_for_prices_or_discounts_BPPR,
+T_BPPR AS business_partner_for_pricesdiscounts_BPPR,
 T_CACS AS calculate_additional_costs_CACS,
 T_CACF AS calculate_additional_costs_for_CACF,
 T_MACC AS method_of_additional_cost_calculation_MACC,
@@ -1119,12 +1119,12 @@ T_CBTP AS business_partner_type_CBTP,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCAL AS calendar_code_CCAL,
@@ -1135,7 +1135,7 @@ T_OFBP AS soldto_business_partner_OFBP,
 T_CAPP AS customer_approval_CAPP,
 T_RRQT AS return_rejected_quantity_RRQT,
 T_AETC AS authorize_excess_transportation_costs_AETC,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_SITE AS site_SITE,
 T_CWAR AS warehouse_CWAR,
 T_MASK AS shipment_handling_unit_mask_MASK,
@@ -1165,12 +1165,12 @@ T_CBTP AS business_partner_type_CBTP,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCNT AS contact_CCNT,
@@ -1235,7 +1235,7 @@ T_IRCD AS interest_rate_code_IRCD,
 T_BICY AS billing_cycle_BICY,
 T_QRBL AS qrbilling_QRBL,
 T_TXTA AS text_TXTA,
-T_CMBB AS bp,_dept_CMBB
+T_CMBB AS bp_dept_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttccom112200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttccom114200` AS 
 SELECT
@@ -1250,12 +1250,12 @@ T_CBTP AS business_partner_type_CBTP,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCAL AS calendar_code_CCAL,
@@ -1281,7 +1281,7 @@ T_LMUS AS last_modified_by_LMUS,
 T_LMDT AS last_modification_date_LMDT,
 T_TXTA AS text_TXTA,
 T_CMBB AS _CMBB,
-T_CMBC AS bp,_dept_CMBC
+T_CMBC AS bp_dept_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.ttccom114200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttccom120200` AS 
 SELECT
@@ -1299,12 +1299,12 @@ T_BPUS AS business_partner_for_statistics_update_BPUS,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCAL AS calendar_code_CCAL,
@@ -1313,7 +1313,7 @@ T_MCFR AS rate_determiner_MCFR,
 T_RAUR AS use_purchase_rates_for_receipts_RAUR,
 T_CPLP AS purchase_price_list_CPLP,
 T_ODIS AS order_discount_ODIS,
-T_BPPR AS business_partner_for_prices_or_discounts_BPPR,
+T_BPPR AS business_partner_for_pricesdiscounts_BPPR,
 T_LCMP AS logistic_company_LCMP,
 T_COFC AS purchase_office_COFC,
 T_CCON AS buyer_CCON,
@@ -1356,19 +1356,19 @@ T_VRYN AS vendor_rating_VRYN,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCAL AS calendar_code_CCAL,
 T_CCNT AS contact_CCNT,
 T_SERV AS freight_service_level_SERV,
 T_OTBP AS buyfrom_business_partner_OTBP,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_SITE AS site_SITE,
 T_CWAR AS warehouse_CWAR,
 T_QUAL AS inspection_QUAL,
@@ -1397,12 +1397,12 @@ T_VRYN AS vendor_rating_VRYN,
 T_CADR AS address_code_CADR,
 T_TELP AS phone_number_TELP,
 T_TLCY AS country_for_phone_number_TLCY,
-T_TLCI AS city_or_area_code_for_phone_number_TLCI,
+T_TLCI AS cityarea_code_for_phone_number_TLCI,
 T_TLLN AS local_number_for_phone_number_TLLN,
 T_TLEX AS extension_for_phone_number_TLEX,
 T_TEFX AS fax_number_TEFX,
 T_TFCY AS country_for_fax_number_TFCY,
-T_TFCI AS city_or_area_code_for_fax_number_TFCI,
+T_TFCI AS cityarea_code_for_fax_number_TFCI,
 T_TFLN AS local_number_for_fax_number_TFLN,
 T_TFEX AS extension_for_fax_number_TFEX,
 T_CCNT AS contact_CCNT,
@@ -1465,7 +1465,7 @@ T_CDAP AS check_for_duplicate_amounts_order_numbers_CDAP,
 T_EICD AS exclude_invoices_with_correction_document_EICD,
 T_RRSI AS request_to_reuse_a_supplier_invoice_number_RRSI,
 T_TXTA AS text_TXTA,
-T_CMBB AS bp,_dept_CMBB
+T_CMBB AS bp_dept_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttccom122200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttccom130200` AS 
 SELECT
@@ -1477,14 +1477,14 @@ T_NAMD AS street_2_NAMD,
 T_HONO AS house_number_HONO,
 T_POBN AS po_box_number_POBN,
 T_NAMF AS city_2_NAMF,
-T_PSTC AS zip_code_or_postal_code_PSTC,
+T_PSTC AS zip_codepostal_code_PSTC,
 T_CRTE AS route_CRTE,
 T_TELP AS telephone_TELP,
 T_TELX AS telex_TELX,
 T_TEFX AS fax_TEFX,
 T_CCIT AS city_CCIT,
 T_CCTY AS country_CCTY,
-T_CSTE AS state_or_province_CSTE,
+T_CSTE AS stateprovince_CSTE,
 T_BLDG AS building_BLDG,
 T_BLFL AS floor_BLFL,
 T_BLUN AS unit_BLUN,
@@ -1522,7 +1522,7 @@ T_LN04 AS address_line_4_LN04,
 T_LN05 AS address_line_5_LN05,
 T_LN06 AS address_line_6_LN06,
 T_TXTA AS text_TXTA,
-T_CMBA AS states_or_provinces_CMBA,
+T_CMBA AS statesprovinces_CMBA,
 T_CMBB AS cities_by_country_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttccom130200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttcibd001200` AS 
@@ -1701,8 +1701,8 @@ T_ICTC AS iso_code_alpha3_ICTC,
 T_TFCD AS telephone_TFCD,
 T_TXCD AS telex_TXCD,
 T_FXCD AS fax_FXCD,
-T_SSGN AS starting_sign_for_city_or_area_code_SSGN,
-T_ESGN AS ending_sign_for_city_or_area_code_ESGN,
+T_SSGN AS starting_sign_for_cityarea_code_SSGN,
+T_ESGN AS ending_sign_for_cityarea_code_ESGN,
 T_XSGN AS sign_for_extension_XSGN,
 T_MEEC AS eu_member_state_MEEC,
 T_GEOC AS obsolete_GEOC,
@@ -1711,7 +1711,7 @@ T_PTTA AS print_tax_by_tax_authority_PTTA,
 T_TXMP AS print_tax_exemption_TXMP,
 T_COAF AS address_format_COAF,
 T_AFAL AS address_format_for_address_lines_AFAL,
-T_ZMSK AS zip_or_postal_code_mask_ZMSK,
+T_ZMSK AS zippostal_code_mask_ZMSK,
 T_PPCD AS zip_code_base_PPCD,
 T_CGP1 AS blwi_country_group_CGP1,
 T_CGP2 AS tax_country_group_CGP2,
@@ -1813,8 +1813,8 @@ T_APPR AS approved_APPR,
 T_USAG AS tax_code_usage_USAG,
 T_DDTT AS defer_declaration_of_tax_transactions_DDTT,
 T_TXTA AS text_TXTA,
-T_CMBA AS country_or_tax_code_CMBA,
-T_CMBB AS country_or_settlement_tax_code_CMBB
+T_CMBA AS country_tax_code_CMBA,
+T_CMBB AS country_settlement_tax_code_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttcmcs036200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttcmcs048200` AS 
 SELECT
@@ -1822,8 +1822,8 @@ T_CPCP AS cost_component_CPCP,
 T_DSCA AS description_DSCA,
 T_CPUS AS component_type_CPUS,
 T_IINV AS included_in_inventory_valuation_IINV,
-T_FXVC AS fixed_or_variable_FXVC,
-T_DINC AS direct_or_indirect_DINC,
+T_FXVC AS fixed_variable_FXVC,
+T_DINC AS direct_indirect_DINC,
 T_CREF AS cost_type_CREF,
 T_TPOC AS cost_subtype_TPOC
 FROM `s-bicloud-curated-0001-p.ln_200.ttcmcs048200`;
@@ -1883,7 +1883,7 @@ T_SFWH AS shipfrom_warehouse_SFWH,
 T_TPRI AS effectivity_unit_upgrade_price_TPRI,
 T_LMDT AS last_configuration_date_LMDT,
 T_TXTA AS text_TXTA,
-T_CMBA AS item,_series,_from_seqnr_CMBA
+T_CMBA AS item_series_from_seqnr_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttcuef002200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttcuef006200` AS 
 SELECT
@@ -1927,7 +1927,7 @@ T_RTQP AS quantity_tolerance_RTQP,
 T_RTQM AS quantity_tolerance_RTQM,
 T_ACCI AS accessories_allowed_ACCI,
 T_MMNF AS multiple_manufacturer_item_MMNF,
-T_CIMS AS check_for_valid_itemmanufacturer_or_itemmanufacturer_and_bp_CIMS,
+T_CIMS AS check_for_valid_itemmanufacturer_itemmanufacturer_and_bp_CIMS,
 T_LCMP AS purchase_office_logistic_company_LCMP,
 T_COFC AS purchase_office_COFC,
 T_CWAR AS warehouse_CWAR,
@@ -1950,7 +1950,7 @@ T_RMSS AS requisition_mandatory_for_service_subcontracting_RMSS,
 T_SCUS AS purchase_schedule_in_use_SCUS,
 T_STYP AS purchase_schedule_type_STYP,
 T_TXTP AS item_purchase_text_TXTP,
-T_CMBA AS mpn_or_manufacturer_CMBA
+T_CMBA AS mpn_manufacturer_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttdipu001200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdipu010200` AS 
 SELECT
@@ -1998,7 +1998,7 @@ T_FREH AS frozen_period_for_increasing_quantity_FREH,
 T_FREL AS frozen_period_for_decreasing_quantity_FREL,
 T_WDFP AS use_working_days_for_frozen_period_WDFP,
 T_DPSL AS delete_past_schedule_lines_DPSL,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_IEBP AS invoice_external_business_partner_IEBP,
 T_IPTI AS internal_processing_time_IPTI,
 T_IPTU AS unit_for_internal_processing_time_IPTU,
@@ -2036,7 +2036,7 @@ T_PCOD AS obsolete_PCOD,
 T_PCSS AS obsolete_PCSS,
 T_TXTA AS item_purchase_text_TXTA,
 T_TXTB AS item_purchase_text_TXTB,
-T_CMBA AS item_group_or_item_or_buyfrom_bp_or_shipfrom_bp_or_effective_date_CMBA
+T_CMBA AS item_group_item_buyfrom_bp_shipfrom_bp_effective_date_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttdipu010200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdipu100200` AS 
 SELECT
@@ -2086,7 +2086,7 @@ T_TLTP AS tolerance_type_TLTP,
 T_ACTN AS action_ACTN,
 T_MMTL AS maximum_tolerance_MMTL,
 T_TXTS AS item_sales_text_TXTS,
-T_CMBA AS item,_site_CMBA
+T_CMBA AS item_site_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttdisa001200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdpur012200` AS 
 SELECT
@@ -2225,8 +2225,8 @@ T_PEGD AS peg_distribution_PEGD,
 T_ADIN AS additional_information_ADIN,
 T_CPLA AS obsolete_CPLA,
 T_TXTA AS line_text_TXTA,
-T_CMBA AS requisition_or_line_CMBA,
-T_CMBB AS mpn_or_manufacturer_CMBB
+T_CMBA AS requisition_line_CMBA,
+T_CMBB AS mpn_manufacturer_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttdpur201200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdpur400200` AS 
 SELECT
@@ -2262,9 +2262,9 @@ T_CADR AS receipt_address_CADR,
 T_CCON AS buyer_CCON,
 T_PLNR AS planner_PLNR,
 T_CCRS AS late_payment_surcharge_CCRS,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_CPLP AS purchase_price_list_CPLP,
-T_BPPR AS bp_prices_or_discounts_BPPR,
+T_BPPR AS bp_pricesdiscounts_BPPR,
 T_BPTX AS bp_texts_BPTX,
 T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
@@ -2461,7 +2461,7 @@ T_REVI AS engineering_item_revision_REVI,
 T_ONPR AS original_net_price_in_order_currency_ONPR,
 T_BGXC AS budget_exception_BGXC,
 T_CMBA AS combined_fields_of_index_1_CMBA,
-T_CMBB AS mpn_or_manufacturer_CMBB
+T_CMBB AS mpn_manufacturer_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttdpur406200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdpur411200` AS 
 SELECT
@@ -2529,8 +2529,8 @@ T_ASNO AS asn_ASNO,
 T_ONPR AS original_net_price_in_order_currency_ONPR,
 T_BGXC AS budget_exception_BGXC,
 T_SPCN AS specification_SPCN,
-T_CMBA AS order,_position,_sequence_CMBA,
-T_CMBB AS mpn_or_manufacturer_CMBB
+T_CMBA AS order_position_sequence_CMBA,
+T_CMBB AS mpn_manufacturer_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttdpur456200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdsls012200` AS 
 SELECT
@@ -2546,10 +2546,10 @@ T_SESQ AS quotation_series_SESQ,
 T_NGSC AS contract_group_NGSC,
 T_SESC AS contract_series_SESC,
 T_SESS AS schedule_series_SESS,
-T_CMBA AS sales_group_or_sales_series_CMBA,
-T_CMBB AS quotation_group_or_quotation_series_CMBB,
-T_CMBC AS contract_group_or_contract_series_CMBC,
-T_CMBD AS order_group_or_schedule_series_CMBD
+T_CMBA AS sales_groupsales_series_CMBA,
+T_CMBB AS quotation_groupquotation_series_CMBB,
+T_CMBC AS contract_groupcontract_series_CMBC,
+T_CMBD AS order_group_schedule_series_CMBD
 FROM `s-bicloud-curated-0001-p.ln_200.ttdsls012200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdsls400200` AS 
 SELECT
@@ -2583,10 +2583,10 @@ T_CREP AS internal_sales_representative_CREP,
 T_OSRP AS external_sales_representative_OSRP,
 T_CVYN AS obsolete_CVYN,
 T_CCRS AS late_payment_surcharge_CCRS,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_CPLS AS sales_price_list_CPLS,
 T_PLDD AS price_list_for_direct_delivery_PLDD,
-T_BPPR AS bp_prices_or_discounts_BPPR,
+T_BPPR AS bp_pricesdiscounts_BPPR,
 T_BPTX AS business_partner_texts_BPTX,
 T_CCTY AS obsolete_CCTY,
 T_CDEC AS delivery_terms_CDEC,
@@ -2645,7 +2645,7 @@ T_LCRQ AS letter_of_credit_required_LCRQ,
 T_AIRP AS allow_inventory_recheck_for_promised_lines_AIRP,
 T_TXTA AS header_text_TXTA,
 T_TXTB AS footer_text_TXTB,
-T_CMBE AS order_or_change_seq_number_CMBE
+T_CMBE AS order_change_seq_number_CMBE
 FROM `s-bicloud-curated-0001-p.ln_200.ttdsls400200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdsls401200` AS 
 SELECT
@@ -2729,7 +2729,7 @@ T_DELC AS delivery_code_DELC,
 T_STBP AS shipto_business_partner_STBP,
 T_STAD AS shipto_address_STAD,
 T_STCN AS shipto_contact_STCN,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_DLPT AS delivery_point_DLPT,
 T_CNCD AS conformance_reporting_CNCD,
 T_PRDT AS planned_receipt_date_PRDT,
@@ -2826,14 +2826,14 @@ T_INVD AS invoice_date_INVD,
 T_INVN AS invoice_number_INVN,
 T_STBP AS shipto_business_partner_STBP,
 T_STAD AS shipto_address_STAD,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_DLPT AS delivery_point_DLPT,
 T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
 T_REVI AS engineering_item_revision_REVI,
 T_CMBA AS sales_order_actual_delivery_line_CMBA,
 T_CMBB AS sales_order_line_CMBB,
-T_CMBC AS shipto_address_or_delivery_point_CMBC
+T_CMBC AS shipto_addressdelivery_point_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.ttdsls406200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttdsls456200` AS 
 SELECT
@@ -2923,7 +2923,7 @@ T_INVD AS invoice_date_INVD,
 T_INVN AS invoice_number_INVN,
 T_STBP AS shipto_business_partner_STBP,
 T_STAD AS shipto_address_STAD,
-T_CFRW AS carrier_or_lsp_CFRW,
+T_CFRW AS carrierlsp_CFRW,
 T_DLPT AS delivery_point_DLPT,
 T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
@@ -2948,8 +2948,8 @@ T_PTBP AS payto_business_partner_PTBP,
 T_OTBP AS buyfrom_business_partner_OTBP,
 T_DOCD AS document_date_DOCD,
 T_TPAY AS document_type_TPAY,
-T_CCUR AS currency_or_rate_CCUR,
-T_PFRE AS selfbilling_or_internal_invoice_PFRE,
+T_CCUR AS currencyrate_CCUR,
+T_PFRE AS selfbillinginternal_invoice_PFRE,
 T_RATE AS currency_rate_RATE,
 T_RATF AS rate_factor_RATF,
 T_RADE AS rate_determination_RADE,
@@ -3000,7 +3000,7 @@ T_OSCH AS original_schedule_line_number_OSCH,
 T_SUBC AS subcontracting_SUBC,
 T_BLAC AS type_of_blocked_account_BLAC,
 T_RAGR AS remittance_agreement_RAGR,
-T_PAYM AS payment_or_receipt_method_PAYM,
+T_PAYM AS paymentreceipt_method_PAYM,
 T_LOCO AS logistic_company_LOCO,
 T_ORNO AS order_ORNO,
 T_BLOC AS hold_reason_BLOC,
@@ -3056,7 +3056,7 @@ T_IAMT AS invoiced_amount_IAMT,
 T_IQAN AS invoiced_quantity_IQAN,
 T_AMTH AS amount_in_home_currency_AMTH,
 T_FINL AS obsolete_FINL,
-T_PRIC AS update_average_or_last_purchase_price_PRIC,
+T_PRIC AS update_averagelast_purchase_price_PRIC,
 T_DATA AS date_of_approval_DATA,
 T_APRY AS approval_year_APRY,
 T_APRP AS approval_period_APRP,
@@ -3072,7 +3072,7 @@ T_PDIF AS price_difference_PDIF,
 T_PDFD AS price_difference_determined_PDFD,
 T_CMBA AS _CMBA,
 T_CMBB AS _CMBB,
-T_CMBC AS combined_field:_vatc,_cvat_CMBC
+T_CMBC AS combined_field_vatc_cvat_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.ttfacp250200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttfacp251200` AS 
 SELECT
@@ -3097,7 +3097,7 @@ T_IAMT AS invoiced_amount_IAMT,
 T_IQAN AS invoiced_quantity_IQAN,
 T_AMTH AS amount_in_home_currency_AMTH,
 T_FINL AS obsolete_FINL,
-T_PRIC AS update_average_or_last_purchase_price_PRIC,
+T_PRIC AS update_averagelast_purchase_price_PRIC,
 T_DATA AS date_of_approval_DATA,
 T_APRY AS approval_year_APRY,
 T_APRP AS approval_period_APRP,
@@ -3116,18 +3116,18 @@ T_SUBL AS account_sublevel_SUBL,
 T_DESC AS ledger_account_description_DESC,
 T_ATYP AS account_type_ATYP,
 T_SKEY AS search_key_SKEY,
-T_DIM1 AS dimension_1_used_y_or_n_DIM1,
-T_DIM2 AS dimension_2_used_y_or_n_DIM2,
-T_DIM3 AS dimension_3_used_y_or_n_DIM3,
-T_DIM4 AS dimension_4_used_y_or_n_DIM4,
-T_DIM5 AS dimension_5_used_y_or_n_DIM5,
-T_DIM6 AS dimension_6_used_y_or_n_DIM6,
-T_DIM7 AS dimension_7_used_y_or_n_DIM7,
-T_DIM8 AS dimension_8_used_y_or_n_DIM8,
-T_DIM9 AS dimension_9_used_y_or_n_DIM9,
-T_DM10 AS dimension_10_used_y_or_n_DM10,
-T_DM11 AS dimension_11_used_y_or_n_DM11,
-T_DM12 AS dimension_12_used_y_or_n_DM12,
+T_DIM1 AS dimension_1_used_yn_DIM1,
+T_DIM2 AS dimension_2_used_yn_DIM2,
+T_DIM3 AS dimension_3_used_yn_DIM3,
+T_DIM4 AS dimension_4_used_yn_DIM4,
+T_DIM5 AS dimension_5_used_yn_DIM5,
+T_DIM6 AS dimension_6_used_yn_DIM6,
+T_DIM7 AS dimension_7_used_yn_DIM7,
+T_DIM8 AS dimension_8_used_yn_DIM8,
+T_DIM9 AS dimension_9_used_yn_DIM9,
+T_DM10 AS dimension_10_used_yn_DM10,
+T_DM11 AS dimension_11_used_yn_DM11,
+T_DM12 AS dimension_12_used_yn_DM12,
 T_PLAC AS statutory_parent_account_PLAC,
 T_PCAC AS complementary_parent_account_PCAC,
 T_IFAS AS fixed_asset_integration_IFAS,
@@ -3143,7 +3143,7 @@ T_BFDT AS blocking_effective_from_BFDT,
 T_BUDT AS blocking_effective_to_BUDT,
 T_CVAT AS default_tax_code_CVAT,
 T_PERC AS variable_percentage_PERC,
-T_DBCR AS debit_or_credit_indicator_DBCR,
+T_DBCR AS debitcredit_indicator_DBCR,
 T_LELA AS legal_ledger_account_LELA,
 T_LEDC AS legal_ledger_account_description_LEDC,
 T_SEAR AS source_of_earnings_SEAR,
@@ -3188,8 +3188,8 @@ T_SKEY AS search_key_SKEY,
 T_QAN1 AS unit_1_QAN1,
 T_QAN2 AS unit_2_QAN2,
 T_TEXT AS text_TEXT,
-T_C001 AS dimension_type_or_dimension_C001,
-T_C002 AS dimension_type_or_parent_dimension_C002
+T_C001 AS dimension_typedimension_C001,
+T_C002 AS dimension_typeparent_dimension_C002
 FROM `s-bicloud-curated-0001-p.ln_200.ttfgld010200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttfgld011200` AS 
 SELECT
@@ -3270,17 +3270,17 @@ T_DM12 AS dimension_12_DM12,
 T_REFR AS transaction_reference_REFR,
 T_REF2 AS reference_REF2,
 T_AMNT AS amount_AMNT,
-T_CCUR AS currency_or_rate_CCUR,
+T_CCUR AS currencyrate_CCUR,
 T_RATD AS rate_date_RATD,
 T_RATE AS rate_RATE,
 T_FACT AS rate_factor_FACT,
 T_RTYP AS exchange_rate_type_RTYP,
 T_AMTH AS amount_in_home_currency_AMTH,
-T_DBCR AS debit_or_credit_DBCR,
+T_DBCR AS debit_credit_DBCR,
 T_CCTY AS country_for_tax_CCTY,
 T_CVAT AS tax_code_CVAT,
 T_VTYP AS tax_origin_VTYP,
-T_VLAC AS tax_ledger_a_or_c_VLAC,
+T_VLAC AS tax_ledger_ac_VLAC,
 T_VAMT AS tax_amount_in_payment_currency_VAMT,
 T_VAMH AS tax_amount_in_home_currency_VAMH,
 T_QTY1 AS quantity_1_QTY1,
@@ -3346,7 +3346,7 @@ T_VAMT AS tax_amount_VAMT,
 T_VAMH AS tax_amount_in_hc_VAMH,
 T_PVAT AS tax_percentage_PVAT,
 T_BPID AS business_partner_BPID,
-T_VLAC AS tax_ledger_a_or_c_VLAC,
+T_VLAC AS tax_ledger_ac_VLAC,
 T_DIM1 AS dimension_1_DIM1,
 T_DIM2 AS dimension_2_DIM2,
 T_DIM3 AS dimension_3_DIM3,
@@ -3397,7 +3397,7 @@ T_DUED AS payment_due_date_DUED,
 T_WTST AS tax_declaration_status_WTST,
 T_BPTC AS business_partner_tax_country_BPTC,
 T_FOVN AS business_partner_tax_number_FOVN,
-T_CSTE AS state_or_province_CSTE,
+T_CSTE AS state_province_CSTE,
 T_IVCM AS invoice_company_IVCM,
 T_IVTT AS invoice_transaction_type_IVTT,
 T_IVDC AS invoice_document_IVDC,
@@ -3487,7 +3487,7 @@ T_HPPR AS obsolete_HPPR,
 T_IDPG AS inherit_demand_peg_IDPG,
 T_ICFM AS customer_furnished_material_ICFM,
 T_TXTA AS bom_text_TXTA,
-T_CMBA AS combined_item,_routing,_position_sequence_number_CMBA
+T_CMBA AS combined_item_routing_position_sequence_number_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttibom010200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticpr007200` AS 
 SELECT
@@ -3522,7 +3522,7 @@ T_CHRT AS standard_cost_component_scheme_CHRT,
 T_COYN AS combined_ownership_allowed_COYN,
 T_INLC AS include_landed_costs_INLC,
 T_LCST AS landed_costs_set_LCST,
-T_CMBA AS item,enterprise_unit_CMBA
+T_CMBA AS itementerprise_unit_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tticpr007200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticpr205200` AS 
 SELECT
@@ -3535,7 +3535,7 @@ T_AFAT AS added_amount_fixed_part_AFAT,
 T_AVAT AS added_amount_variable_part_AVAT,
 T_TFAT AS total_amount_fixed_part_TFAT,
 T_TVAT AS total_amount_variable_part_TVAT,
-T_CMBA AS item,enterprise_unit_CMBA
+T_CMBA AS itementerprise_unit_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tticpr205200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticpr300200` AS 
 SELECT
@@ -3546,7 +3546,7 @@ T_SEQN AS sequence_number_SEQN,
 T_CPCP AS cost_component_CPCP,
 T_NUNI AS number_of_units_NUNI,
 T_AMNT AS amount_AMNT,
-T_CMBA AS item,enterprise_unit_CMBA
+T_CMBA AS itementerprise_unit_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tticpr300200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticpr305200` AS 
 SELECT
@@ -3560,7 +3560,7 @@ T_AFAT AS added_amount_fixed_part_AFAT,
 T_AVAT AS added_amount_variable_part_AVAT,
 T_TFAT AS total_amount_fixed_part_TFAT,
 T_TVAT AS total_amount_variable_part_TVAT,
-T_CMBA AS item,enterprise_unit_CMBA
+T_CMBA AS itementerprise_unit_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.tticpr305200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticst001200` AS 
 SELECT
@@ -3629,7 +3629,7 @@ T_BSEQ AS bom_sequence_BSEQ,
 T_EFFN AS obsolete_EFFN,
 T_TXTA AS material_text_TXTA,
 T_CMBA AS combined_field_CMBA,
-T_CMBB AS prod_order,_ref_designator_CMBB
+T_CMBB AS prod_order_ref_designator_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.tticst001200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticst002200` AS 
 SELECT
@@ -3842,7 +3842,7 @@ T_BMIT AS bom_main_item_BMIT,
 T_BPON AS bom_position_BPON,
 T_BSEQ AS bom_sequence_BSEQ,
 T_CMBA AS combined_field_CMBA,
-T_CMBB AS prod_order,_ref_designator_CMBB
+T_CMBB AS prod_order_ref_designator_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.tticst154200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tticst157200` AS 
 SELECT
@@ -4003,7 +4003,7 @@ FROM `s-bicloud-curated-0001-p.ln_200.ttiedm110200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttimfc010200` AS 
 SELECT
 T_KOOR AS order_type_KOOR,
-T_PDNO AS production_or_assembly_order_PDNO,
+T_PDNO AS production_assembly_order_PDNO,
 T_PRSP AS schedule_position_PRSP,
 T_MITM AS item_MITM,
 T_MSER AS serial_number_MSER,
@@ -4015,7 +4015,7 @@ T_STAT AS serial_status_STAT,
 T_RAOP AS rejected_at_operation_RAOP,
 T_VALI AS valid_VALI,
 T_RWKO AS rework_order_RWKO,
-T_CMBA AS combined_koor,_pdno,_prsp,_mitm,_mser_CMBA
+T_CMBA AS combined_koor_pdno_prsp_mitm_mser_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttimfc010200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttipcs020200` AS 
 SELECT
@@ -4123,7 +4123,7 @@ T_TLYN AS transfer_batch_less_than_production_batch_TLYN,
 T_TRLS AS transfer_batch_quantity_TRLS,
 T_EXIN AS extra_information_EXIN,
 T_TXTA AS task_relationship_text_TXTA,
-T_CMBA1 AS task,w_or_c,machine_CMBA1
+T_CMBA1 AS taskwcmachine_CMBA1
 FROM `s-bicloud-curated-0001-p.ln_200.ttirou004200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttirou102200` AS 
 SELECT
@@ -4174,7 +4174,7 @@ T_MVTM AS move_time_MVTM,
 T_DMSO AS dms_on_completion_DMSO,
 T_TXTA AS operation_text_TXTA,
 T_CMBA AS combined_item_routing_CMBA,
-T_CMBB AS item,_routing,_operation_seqn_CMBB
+T_CMBB AS item_routing_operation_seqn_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttirou102200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttisfc001200` AS 
 SELECT
@@ -4267,7 +4267,7 @@ T_BMRV AS bom_revision_BMRV,
 T_ROUC AS routing_code_ROUC,
 T_RORV AS routing_revision_RORV,
 T_TXTA AS production_order_text_TXTA,
-T_CMBA AS item,_site_CMBA
+T_CMBA AS item_site_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.ttisfc001200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttisfc005200` AS 
 SELECT
@@ -4331,14 +4331,14 @@ T_RETM AS remaining_production_time_RETM,
 T_TRDT AS transport_date_to_TRDT,
 T_ESDT AS q_start_date_ESDT,
 T_SLTM AS slack_time_SLTM,
-T_PRDT AS setup_plus_run_start_date_PRDT,
+T_PRDT AS setuprun_start_date_PRDT,
 T_RSDT AS remainder_start_date_RSDT,
 T_PRRD AS wait_start_date_PRRD,
 T_FIDT AS move_start_date_FIDT,
 T_TRDF AS transport_date_from_TRDF,
 T_TRNO AS transport_date_to_TRNO,
 T_MVRD AS queue_start_MVRD,
-T_LFDT AS su_plus_run_LFDT,
+T_LFDT AS surun_LFDT,
 T_FXPD AS fixed_planning_dates_FXPD,
 T_PSDT AS planned_start_date_PSDT,
 T_PFDT AS planned_finish_date_PFDT,
@@ -4392,7 +4392,7 @@ T_ROSI AS reference_operation_site_ROSI,
 T_ROWC AS reference_operation_work_center_ROWC,
 T_TXTA AS operation_text_TXTA,
 T_CMBA AS prodorder_operation_CMBA,
-T_CMBB AS site,_work_center,_machine_type_CMBB
+T_CMBB AS site_work_center_machine_type_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.ttisfc010200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh010200` AS 
 SELECT
@@ -4485,8 +4485,8 @@ T_RDGD AS return_quarantine_inventory_payable_to_supplier_RDGD,
 T_DMST AS direct_material_supply_transfer_DMST,
 T_PLBS AS planning_by_supplier_PLBS,
 T_KTOR AS order_for_kit_KTOR,
-T_CARR AS carrier_or_lsp_CARR,
-T_CBIN AS carrier_or_lsp_binding_CBIN,
+T_CARR AS carrierlsp_CARR,
+T_CBIN AS carrierlsp_binding_CBIN,
 T_CRTE AS route_CRTE,
 T_CDEC AS delivery_terms_CDEC,
 T_PTPA AS point_of_title_passage_PTPA,
@@ -4528,7 +4528,7 @@ T_HSTA AS header_status_HSTA,
 T_TXTA AS header_text_TXTA,
 T_TXTB AS footer_text_TXTB,
 T_TXTK AS kit_text_TXTK,
-T_CMBA AS origin,_order,_set_CMBA
+T_CMBA AS origin_order_set_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh200200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh210200` AS 
 SELECT
@@ -4612,11 +4612,11 @@ T_PMSK AS procedure_mask_PMSK,
 T_ACTI AS activity_ACTI,
 T_LSTA AS line_status_LSTA,
 T_TXTN AS inbound_text_TXTN,
-T_CMBA AS origin_or_order_or_line_or_sequence_CMBA,
+T_CMBA AS originorderlinesequence_CMBA,
 T_CMBB AS warehouse_order_header_CMBB,
-T_CMBD AS item_or_serial_number_or_receiving_warehouse_CMBD,
-T_CMBE AS item_or_package_definition_CMBE,
-T_CMBF AS item_or_lot_CMBF
+T_CMBD AS itemserial_numberreceiving_warehouse_CMBD,
+T_CMBE AS itempackage_definition_CMBE,
+T_CMBF AS itemlot_CMBF
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh210200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh211200` AS 
 SELECT
@@ -4677,8 +4677,8 @@ T_CNCD AS conformance_reporting_CNCD,
 T_NCRF AS obsolete_NCRF,
 T_IMAG AS picture_IMAG,
 T_ITXT AS inspection_text_ITXT,
-T_CMBA AS inspection_or_inspection_sequence_CMBA,
-T_CMBB AS receipt_or_receipt_line_CMBB
+T_CMBA AS inspectioninspection_sequence_CMBA,
+T_CMBB AS receiptreceipt_line_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh211200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh215200` AS 
 SELECT
@@ -4721,13 +4721,13 @@ T_BSEQ AS bom_line_sequence_BSEQ,
 T_PMSK AS procedure_mask_PMSK,
 T_ACTI AS activity_ACTI,
 T_ALBP AS assign_unoccupied_destination_location_to_business_partner_ALBP,
-T_CMBA AS warehouse_or_location_CMBA,
-T_CMBB AS item_or_lot_CMBB,
-T_CMBC AS warehouse_or_destination_location_CMBC,
-T_CMBD AS origin_or_order_or_line_or_sequence_CMBD,
-T_CMBE AS item_or_serial_number_CMBE,
-T_CMBF AS receipt_or_receipt_line_CMBF,
-T_CMBG AS inspection_or_inspection_sequence_CMBG
+T_CMBA AS warehouselocation_CMBA,
+T_CMBB AS itemlot_CMBB,
+T_CMBC AS warehousedestination_location_CMBC,
+T_CMBD AS originorderlinesequence_CMBD,
+T_CMBE AS itemserial_number_CMBE,
+T_CMBF AS receiptreceipt_line_CMBF,
+T_CMBG AS inspectioninspection_sequence_CMBG
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh215200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh220200` AS 
 SELECT
@@ -4872,10 +4872,10 @@ T_SERP AS outbound_advice_serial_present_SERP,
 T_ACTI AS activity_ACTI,
 T_PMSK AS procedure_mask_PMSK,
 T_SPCN AS specification_SPCN,
-T_CMBA AS warehouse_or_location_CMBA,
+T_CMBA AS warehouselocation_CMBA,
 T_CMBC AS warehouse_locationto_CMBC,
 T_CMBD AS outbound_order_line_CMBD,
-T_CMBE AS item,serial_number,warehouse_CMBE,
+T_CMBE AS itemserial_numberwarehouse_CMBE,
 T_CMBF AS outbound_advice_CMBF
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh225200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh300200` AS 
@@ -4884,7 +4884,7 @@ T_SFBP AS shipfrom_business_partner_SFBP,
 T_SHID AS shipment_SHID,
 T_CWAR AS warehouse_CWAR,
 T_DADD AS delivery_address_DADD,
-T_CARR AS delivery_carrier_or_lsp_CARR,
+T_CARR AS delivery_carrierlsp_CARR,
 T_TCOD AS obsolete_TCOD,
 T_ACDT AS asn_creation_date_ACDT,
 T_SHDT AS shipping_date_SHDT,
@@ -4953,15 +4953,15 @@ T_WMSS AS wms_status_WMSS,
 T_TCST AS document_compliance_status_TCST,
 T_DELN AS delivery_note_DELN,
 T_TEXT AS text_TEXT,
-T_CMBA AS shipfrom_bp_or_shipment_or_sequence_CMBA,
-T_CMBB AS shipfrom_bp_or_shipment_CMBB,
-T_CMBC AS item_or_serial_number_CMBC
+T_CMBA AS shipfrom_bpshipmentsequence_CMBA,
+T_CMBB AS shipfrom_bpshipment_CMBB,
+T_CMBC AS itemserial_number_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh301200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh310200` AS 
 SELECT
 T_RCNO AS receipt_RCNO,
 T_SFBP AS shipfrom_business_partner_SFBP,
-T_CARR AS delivery_carrier_or_lsp_CARR,
+T_CARR AS delivery_carrierlsp_CARR,
 T_CWAR AS warehouse_CWAR,
 T_SHDA AS delivery_address_SHDA,
 T_PDDT AS planned_delivery_date_PDDT,
@@ -5058,19 +5058,19 @@ T_ADIN AS additional_information_ADIN,
 T_RTCF AS return_certificate_RTCF,
 T_TXTN AS receipt_line_text_TXTN,
 T_ITXT AS inspection_text_ITXT,
-T_CMBA AS receipt_or_receipt_line_CMBA,
-T_CMBB AS origin_or_order_or_line_or_sequence_CMBB,
-T_CMBC AS item_or_package_definition_CMBC,
-T_CMBD AS warehouse_or_location_CMBD,
-T_CMBE AS item_or_serial_number_or_receiving_warehouse_CMBE,
-T_CMBF AS warehouse_or_destination_location_CMBF
+T_CMBA AS receiptreceipt_line_CMBA,
+T_CMBB AS originorderlinesequence_CMBB,
+T_CMBC AS itempackage_definition_CMBC,
+T_CMBD AS warehouselocation_CMBD,
+T_CMBE AS itemserial_numberreceiving_warehouse_CMBE,
+T_CMBF AS warehousedestination_location_CMBF
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh312200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh360200` AS 
 SELECT
 T_RCNO AS receipt_RCNO,
 T_HDAT AS history_date_HDAT,
 T_SFBP AS shipfrom_business_partner_SFBP,
-T_CARR AS delivery_carrier_or_lsp_CARR,
+T_CARR AS delivery_carrierlsp_CARR,
 T_CWAR AS warehouse_CWAR,
 T_SHDA AS delivery_address_SHDA,
 T_PDDT AS planned_delivery_date_PDDT,
@@ -5168,7 +5168,7 @@ T_HIST AS history_status_HIST,
 T_HLGN AS history_user_HLGN,
 T_TXTN AS receipt_line_text_TXTN,
 T_ITXT AS inspection_text_ITXT,
-T_CMBA AS receipt_or_receipt_line_CMBA
+T_CMBA AS receiptreceipt_line_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh362200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh400200` AS 
 SELECT
@@ -5198,7 +5198,7 @@ T_STAD AS shipto_address_STAD,
 T_STSI AS shipto_site_STSI,
 T_DLPT AS delivery_point_DLPT,
 T_CRTE AS route_CRTE,
-T_CARR AS carrier_or_lsp_CARR,
+T_CARR AS carrierlsp_CARR,
 T_SDTF AS shipment_date_from_SDTF,
 T_SDTT AS shipment_date_to_SDTT,
 T_WGHT AS gross_weight_WGHT,
@@ -5365,11 +5365,11 @@ T_ATXT AS source_acceptance_text_ATXT,
 T_DTXT AS destination_acceptance_text_DTXT,
 T_TEXT AS shipment_line_text_TEXT,
 T_CMBA AS shipment_line_CMBA,
-T_CMBB AS item_or_lot_CMBB,
-T_CMBC AS warehouse_or_location_CMBC,
-T_CMBD AS item,serial_number,warehouse_CMBD,
+T_CMBB AS itemlot_CMBB,
+T_CMBC AS warehouselocation_CMBC,
+T_CMBD AS itemserial_numberwarehouse_CMBD,
 T_CMBE AS shipping_sequence_detail_CMBE,
-T_CMBF AS shipto_address,_delivery_point_CMBF
+T_CMBF AS shipto_address_delivery_point_CMBF
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh431200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh440200` AS 
 SELECT
@@ -5377,12 +5377,12 @@ T_LOAD AS load_LOAD,
 T_SITE AS site_SITE,
 T_CRTE AS route_CRTE,
 T_PDDT AS planned_delivery_date_PDDT,
-T_CARP AS pickup_carrier_or_lsp_CARP,
+T_CARP AS pickup_carrierlsp_CARP,
 T_TRMP AS pickup_transport_category_TRMP,
 T_TMGP AS transport_means_group_TMGP,
 T_TMCP AS transport_means_combination_TMCP,
 T_TRIP AS pickup_means_of_transport_TRIP,
-T_CARD AS delivery_carrier_or_lsp_CARD,
+T_CARD AS delivery_carrierlsp_CARD,
 T_TMGD AS transport_means_group_TMGD,
 T_TMCD AS transport_means_combination_TMCD,
 T_TRID AS delivery_means_of_transport_TRID,
@@ -5439,7 +5439,7 @@ T_STAD AS shipto_address_STAD,
 T_STSI AS shipto_site_STSI,
 T_DLPT AS delivery_point_DLPT,
 T_CRTE AS route_CRTE,
-T_CARR AS carrier_or_lsp_CARR,
+T_CARR AS carrierlsp_CARR,
 T_SDTF AS shipment_date_from_SDTF,
 T_SDTT AS shipment_date_to_SDTT,
 T_WGHT AS gross_weight_WGHT,
@@ -5604,9 +5604,9 @@ T_TCST AS document_compliance_status_TCST,
 T_ATXT AS source_acceptance_text_ATXT,
 T_DTXT AS destination_acceptance_text_DTXT,
 T_TEXT AS text_TEXT,
-T_CMBA AS shipment_or_line_CMBA,
-T_CMBB AS item_or_lot_CMBB,
-T_CMBC AS warehouse_or_location_CMBC
+T_CMBA AS shipmentline_CMBA,
+T_CMBB AS itemlot_CMBB,
+T_CMBC AS warehouselocation_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh451200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh520200` AS 
 SELECT
@@ -5654,9 +5654,9 @@ T_DPBY AS inventory_discrepancies_paid_by_DPBY,
 T_PRCD AS processed_PRCD,
 T_SPCN AS specification_SPCN,
 T_TXTA AS line_text_TXTA,
-T_CMBA AS order,_line_CMBA,
-T_CMBB AS warehouse_or_location_CMBB,
-T_CMBC AS item_or_lot_CMBC
+T_CMBA AS order_line_CMBA,
+T_CMBB AS warehouselocation_CMBB,
+T_CMBC AS itemlot_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh521200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinh540200` AS 
 SELECT
@@ -5670,9 +5670,9 @@ T_FCNT AS force_cycle_count_FCNT,
 T_ORNO AS order_ORNO,
 T_CNTN AS count_number_CNTN,
 T_PONO AS line_PONO,
-T_CMBA AS order_or_count_number_CMBA,
-T_CMBB AS warehouse_or_location_CMBB,
-T_CMBC AS item_or_lot_CMBC
+T_CMBA AS ordercount_number_CMBA,
+T_CMBB AS warehouselocation_CMBB,
+T_CMBC AS itemlot_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.twhinh540200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinp100200` AS 
 SELECT
@@ -5700,14 +5700,14 @@ T_SITE AS site_SITE,
 T_TYPW AS warehouse_type_TYPW,
 T_CWAR AS warehouse_CWAR,
 T_CWOC AS work_center_CWOC,
-T_BPID AS shipfrom_or_shipto_business_partner_BPID,
+T_BPID AS shipfromshipto_business_partner_BPID,
 T_CPRJ AS project_CPRJ,
 T_CSPA AS element_CSPA,
 T_CACT AS activity_CACT,
 T_CSTL AS extension_CSTL,
 T_CCCO AS cost_component_CCCO,
 T_CPOR AS project_peg_origin_CPOR,
-T_BFST AS buyfrom_or_soldto_business_partner_BFST,
+T_BFST AS buyfromsoldto_business_partner_BFST,
 T_INRL AS affiliated_company_INRL,
 T_ISCN AS affiliated_company_number_ISCN,
 T_PRIO AS order_priority_PRIO,
@@ -5744,7 +5744,7 @@ T_QSTK AS quantity_QSTK,
 T_QHND AS inventory_after_transaction_QHND,
 T_LOGN AS user_LOGN,
 T_INMV AS internal_move_INMV,
-T_CMBA AS warehouse_or_location_CMBA
+T_CMBA AS warehouselocation_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.twhinr100200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhinr110200` AS 
 SELECT
@@ -5825,7 +5825,7 @@ T_CRDT AS creation_date_CRDT,
 T_TRDT AS last_transaction_date_TRDT,
 T_LSID AS last_storage_inspection_date_LSID,
 T_MPKD AS multiple_package_definition_MPKD,
-T_CMBA AS warehouse_or_location_CMBA,
+T_CMBA AS warehouselocation_CMBA,
 T_CMBB AS combined_for_primary_key_CMBB
 FROM `s-bicloud-curated-0001-p.ln_200.twhinr140200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhwmd140200` AS 
@@ -5923,12 +5923,12 @@ T_UDAP AS apply_user_defaults_during_automatic_processing_UDAP,
 T_PTRB AS overrule_project_cost_peg_transfer_rules_PTRB,
 T_ATUI AS transfer_allowed_to_unpegged_inventory_ATUI,
 T_OELR AS overrule_item_restriction_for_commingling_and_transfers_OELR,
-T_RSVE AS release_unvalidated_loads_or_shipments_RSVE,
+T_RSVE AS release_unvalidated_loadsshipments_RSVE,
 T_CSSD AS confirm_unprinted_shipments_by_external_application_CSSD,
-T_CMBA AS number_group_or_series_for_receipts_CMBA,
-T_CMBB AS number_group_or_series_for_inbound_inspections_CMBB,
-T_CMBC AS number_group_or_series_for_outbound_inspections_CMBC,
-T_CMBD AS number_group_or_series_for_inbound_advice_CMBD
+T_CMBA AS number_groupseries_for_receipts_CMBA,
+T_CMBB AS number_groupseries_for_inbound_inspections_CMBB,
+T_CMBC AS number_groupseries_for_outbound_inspections_CMBC,
+T_CMBD AS number_groupseries_for_inbound_advice_CMBD
 FROM `s-bicloud-curated-0001-p.ln_200.twhwmd140200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhwmd200200` AS 
 SELECT
@@ -5938,7 +5938,7 @@ T_SLOC AS locations_SLOC,
 T_USSE AS use_site_settings_USSE,
 T_ITLO AS multiitem_locations_ITLO,
 T_LOLO AS multilot_by_item_locations_LOLO,
-T_FREE AS minimum_%%_free_for_inbound_advice_FREE,
+T_FREE AS minimum_free_for_inbound_advice_FREE,
 T_CCAL AS calendar_code_CCAL,
 T_RACT AS availability_type_RACT,
 T_ARLO AS receiving_location_ARLO,
@@ -6037,7 +6037,7 @@ SELECT
 T_CWAR AS warehouse_CWAR,
 T_ITEM AS item_ITEM,
 T_UIDT AS use_item_ordering_data_UIDT,
-T_AUSO AS update_inventory_or_order_data_AUSO,
+T_AUSO AS update_inventoryorder_data_AUSO,
 T_SRPR AS serial_price_SRPR,
 T_VALM AS inventory_valuation_method_VALM,
 T_VWVG AS valuation_by_warehouse_valuation_group_VWVG,
@@ -6055,7 +6055,7 @@ T_CFMD AS forecast_method_CFMD,
 T_CSPD AS season_pattern_for_demand_CSPD,
 T_USAB AS expected_annual_issue_USAB,
 T_CSPS AS seasonal_pattern_for_safety_stock_CSPS,
-T_SERV AS service_level_[%%]_SERV,
+T_SERV AS service_level_SERV,
 T_SLMP AS slowmoving_percentage_SLMP,
 T_ABCC AS abc_code_ABCC,
 T_OABC AS manually_entered_abc_code_OABC,
@@ -6172,9 +6172,9 @@ T_FULL AS location_full_FULL,
 T_CADR AS address_CADR,
 T_OWNR AS owner_OWNR,
 T_TXTA AS text_TXTA,
-T_CMBA AS warehouse_or_location_CMBA,
-T_CMBB AS warehouse_or_zone_CMBB,
-T_CMBC AS warehouse_or_zone_or_location_CMBC
+T_CMBA AS warehouselocation_CMBA,
+T_CMBB AS warehousezone_CMBB,
+T_CMBC AS warehousezonelocation_CMBC
 FROM `s-bicloud-curated-0001-p.ln_200.twhwmd300200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhwmd310200` AS 
 SELECT
@@ -6190,7 +6190,7 @@ T_BASS AS blocked_for_assembly_BASS,
 T_EMNO AS employee_EMNO,
 T_PRTR AS device_PRTR,
 T_OWNR AS owner_OWNR,
-T_CMBA AS warehouse_or_zone_CMBA
+T_CMBA AS warehousezone_CMBA
 FROM `s-bicloud-curated-0001-p.ln_200.twhwmd310200`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.twhwmd400200` AS 
 SELECT
@@ -6206,7 +6206,7 @@ T_PICS AS floor_stock_PICS,
 T_SCST AS inventory_carrying_costs_SCST,
 T_FFSI AS frequency_for_storage_inspection_FFSI,
 T_KPSL AS period_for_shelf_life_KPSL,
-T_NPSL AS shelf_life_[periods]_NPSL,
+T_NPSL AS shelf_life_periods_NPSL,
 T_RJHA AS rejects_handling_RJHA,
 T_DDLT AS disposition_due_lead_time_DDLT,
 T_TMUN AS time_unit_TMUN,
