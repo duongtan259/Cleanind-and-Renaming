@@ -92,6 +92,15 @@ T_TXTA AS text_TXTA
 FROM `s-bicloud-curated-0001-p.ln_275.ttcmcs052275`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttfacp250275` AS 
 SELECT
+T_AMTH_1 AS amount_in_home_currency_1_AMTH_1,
+T_AMTH_2 AS amount_in_home_currency_2_AMTH_2,
+T_AMTH_3 AS amount_in_home_currency_3_AMTH_3,
+T_RATE_1 AS currency_rate_1_RATE_1,
+T_RATE_2 AS currency_rate_2_RATE_2,
+T_RATE_3 AS currency_rate_3_RATE_3,
+T_RATF_1 AS rate_factor_1_RATF_1,
+T_RATF_2 AS rate_factor_2_RATF_2,
+T_RATF_3 AS rate_factor_3_RATF_3,
 T_ICOM AS financial_company_purchase_invoice_ICOM,
 T_ITYP AS invoice_transaction_type_ITYP,
 T_IDOC AS invoice_document_IDOC,
@@ -102,13 +111,10 @@ T_PONO AS position_PONO,
 T_SQNB AS sequence_number_SQNB,
 T_CCUR AS invoice_currency_CCUR,
 T_IFBP AS invoicefrom_business_partner_IFBP,
-T_RATE AS currency_rate_RATE,
-T_RATF AS rate_factor_RATF,
 T_RATD AS rate_date_RATD,
 T_RTYP AS exchange_rate_type_RTYP,
 T_IAMT AS invoiced_amount_IAMT,
 T_IQAN AS invoiced_quantity_IQAN,
-T_AMTH AS amount_in_home_currency_AMTH,
 T_FINL AS obsolete_FINL,
 T_PRIC AS update_averagelast_purchase_price_PRIC,
 T_DATA AS date_of_approval_DATA,
@@ -123,10 +129,7 @@ T_BUEX AS budget_exception_BUEX,
 T_VATC AS matched_tax_country_VATC,
 T_CVAT AS matched_tax_code_CVAT,
 T_PDIF AS price_difference_PDIF,
-T_PDFD AS price_difference_determined_PDFD,
-T_CMBA AS _CMBA,
-T_CMBB AS _CMBB,
-T_CMBC AS combined_field_vatc_cvat_CMBC
+T_PDFD AS price_difference_determined_PDFD
 FROM `s-bicloud-curated-0001-p.ln_275.ttfacp250275`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttfgld008275` AS 
 SELECT
@@ -206,9 +209,7 @@ T_ATYP AS dimension_type_ATYP,
 T_SKEY AS search_key_SKEY,
 T_QAN1 AS unit_1_QAN1,
 T_QAN2 AS unit_2_QAN2,
-T_TEXT AS text_TEXT,
-T_C001 AS dimension_typedimension_C001,
-T_C002 AS dimension_typeparent_dimension_C002
+T_TEXT AS text_TEXT
 FROM `s-bicloud-curated-0001-p.ln_275.ttfgld010275`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttfgld011275` AS 
 SELECT
@@ -289,6 +290,5 @@ T_DM10 AS dimension_10_DM10,
 T_DM11 AS dimension_11_DM11,
 T_DM12 AS dimension_12_DM12,
 T_ACTV AS active_ACTV,
-T_BUDG AS used_for_budgets_BUDG,
-T_CMBA AS dimensions_CMBA
+T_BUDG AS used_for_budgets_BUDG
 FROM `s-bicloud-curated-0001-p.ln_275.ttfgld475275`;

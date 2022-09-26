@@ -117,8 +117,6 @@ T_EXCO AS expiry_change_order_EXCO,
 T_LDCD AS date_from_cad_LDCD,
 T_CSIG AS item_signal_CSIG,
 T_BMSC AS source_BMSC,
-T_CMBA AS combined_of_eitem_revision_CMBA,
-T_CMBB AS combined_of_unitset_unit_CMBB,
 T_TXTA AS eitem_revision_text_TXTA
 FROM `s-bicloud-curated-0001-p.ln_100.ttiedm100100`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.ttiedm110100` AS 
@@ -141,7 +139,5 @@ T_ALMI AS allow_multiple_items_ALMI,
 T_ALTP AS alternatives_present_ALTP,
 T_USUP AS use_up_materials_present_USUP,
 T_RDSP AS reference_designators_present_RDSP,
-T_CMBA AS combined_eitem_revision_positions_CMBA,
-T_CMBB AS combined_of_eitem_revision_CMBB,
 T_TXTA AS ebom_text_TXTA
 FROM `s-bicloud-curated-0001-p.ln_100.ttiedm110100`;
