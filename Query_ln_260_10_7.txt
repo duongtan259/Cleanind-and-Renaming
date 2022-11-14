@@ -210,6 +210,12 @@ T_CPCP AS cost_component_CPCP
 FROM `s-bicloud-curated-0001-p.ln_260_10_7.tcisli246260`;
 CREATE OR REPLACE VIEW `s-finance-dev-0001-s.cons_LN.tcisli305260_10_7` AS 
 SELECT
+T_RATE_1 AS currency_rate_1_RATE_1,
+T_RATE_2 AS currency_rate_2_RATE_2,
+T_RATE_3 AS currency_rate_3_RATE_3,
+T_RATF_1 AS currency_rate_factor_1_RATF_1,
+T_RATF_2 AS currency_rate_factor_2_RATF_2,
+T_RATF_3 AS currency_rate_factor_3_RATF_3,
 T_SFCP AS financial_company_SFCP,
 T_TRAN AS sales_invoice_transaction_type_TRAN,
 T_IDOC AS invoice_number_IDOC,
